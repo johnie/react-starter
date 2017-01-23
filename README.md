@@ -1,5 +1,7 @@
 # React Starterkit
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wbkd/react-starter.svg?token=4aebf1c735aa32662e53f3ab873a0c803b4a25705d88a8f4370a9b9d158cb538)](https://greenkeeper.io/)
+
 A lightweight Starterkit including [React](https://facebook.github.io/react/), [Redux](http://redux.js.org/), [React Router v4](https://react-router.now.sh/), [Sass](http://sass-lang.com/) and [Webpack v2](https://webpack.js.org/).
 
 ## Get the kit
