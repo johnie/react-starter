@@ -10,7 +10,8 @@
     "start": "NODE_ENV=development webpack-dev-server --config  webpack/webpack.config.dev.js --watch --colors --no-info",
     "upload": "rsync -avz -e \"ssh\" ./build/ moklick_webkid@ssh.alwaysdata.com:/home/moklick/apps.webkid/$npm_package_config_appname && npm run info",
     "deploy": "npm run build && npm run upload",
-    "info": "echo Deploy succeeded on moklick_webkid@ssh.alwaysdata.com:/home/moklick/apps.webkid/$npm_package_config_appname"
+    "info": "echo Deploy succeeded on moklick_webkid@ssh.alwaysdata.com:/home/moklick/apps.webkid/$npm_package_config_appname",
+    "test": "jest --watch"
   },
   "repository": {
     "url": "git@github.com:wbkd/react-starter.git",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
+    "babel-jest": "^19.0.0",
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-polyfill": "^6.23.0",
@@ -34,10 +36,12 @@
     "eslint-import-resolver-webpack": "^0.8.1",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jest": "^19.0.1",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
     "extract-text-webpack-plugin": "2.1.0",
     "html-webpack-plugin": "^2.28.0",
+    "jest": "^19.0.2",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
     "webpack": "2.4.1",

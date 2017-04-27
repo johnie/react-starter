@@ -2,7 +2,7 @@
  * Here you implement your functions you want to use everywhere in your application.
  * See this functions as an example.
  */
-export const DEBUG = true;
+const DEBUG = true;
 
 export function log(...args) {
   if (!DEBUG) {
@@ -13,14 +13,13 @@ export function log(...args) {
 }
 
 export function isUndefined(obj) {
-  return typeof obj === 'undefined';
+  return (typeof obj === 'undefined') || (obj === null);
 }
 
 export function isNumeric(number) {
-  if (isUndefined(number)) {
+  if ((isUndefined(number)) || (typeof number === 'string') || (typeof number === 'boolean')) {
     return false;
   }
-
   return !isNaN(number) && isFinite(number);
 }
 
@@ -31,11 +30,10 @@ export function isNumeric(number) {
  * @param  {Object} [options={}]         [https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString]
  * @return {String}
  */
-export function numberFormat(number, countyCode = 'de-De', options = {}) {
+export function numberFormat(number, countyCode = 'de-DE', options = {}) {
   if (!isNumeric(number) || isUndefined(Number.toLocaleString())) {
     return false;
   }
-
   return number.toLocaleString(countyCode, options);
 }
 
